@@ -1,0 +1,22 @@
+name       : color-picker
+version    : 1.1.2
+release    : 1
+source     :
+    - https://github.com/RonnyDo/ColorPicker/archive/1.1.2.tar.gz : 9b17b78cffedad22e675e13f7c008aef65872455f1efadbc8826d09b20dc8812
+license    : GPL-3.0
+component  : multimedia.graphics
+summary    : One Color Picker to rule them all! No overhelming menus or settings.
+description: |
+    One Color Picker to rule them all! No overhelming menus or settings. An easy tool with the features you need.
+builddeps  :
+    - pkgconfig(granite)
+    - pkgconfig(gtk+-3.0)
+    - meson
+    - vala
+
+setup      : |
+    %meson_configure
+build      : |
+    %meson_build
+install    : |
+    %meson_install
